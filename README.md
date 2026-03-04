@@ -178,3 +178,7 @@ Optional legacy/explicit forms may also be available for some commands with a ch
 - Keep bot host secure and access-controlled.
 - Use minimum required balances in hot wallets.
 
+
+https://linktr.ee/BARKcoinCTO
+https://x.com/BARKcoin2025
+https://t.me/officialbarkcoin
