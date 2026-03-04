@@ -1,0 +1,19 @@
+# Solana
+SOLANA_RPC_URL=https://mainnet.helius-rpc.com/?api-key=
+
+# EVM RPC endpoints
+ETHEREUM_RPC=https://eth.llamarpc.com
+BSC_RPC=https://bsc-dataseed1.binance.org
+POLYGON_RPC=https://polygon-rpc.com
+AVALANCHE_RPC=https://api.avax.network/ext/bc/C/rpc
+ARBITRUM_RPC=https://arb1.arbitrum.io/rpc
+BASE_RPC=https://mainnet.base.org
+OPTIMISM_RPC=https://mainnet.optimism.io
+LINEA_RPC=https://rpc.linea.build
+PULSECHAIN_RPC=https://rpc.pulsechain.com
+
+# Token Gate (restrict bot access to holders of a specific Solana SPL token)
+TOKEN_GATE_ENABLED=true
+TOKEN_GATE_MINT=8Ga7ExC7toM9v1PqCB8jjKRTKqiYqQGLCua2VnXdbonk
+TOKEN_GATE_NAME=BARKcoin
+TOKEN_GATE_MIN_AMOUNT=5000000
