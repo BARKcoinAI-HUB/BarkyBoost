@@ -11,7 +11,7 @@ Developed with ❤️ by BARKcoin 🐶
 
 
 
-# Barky User Guide
+# Barky User Guide (English)
 
 This guide explains how to use **Barky Volume** and **Barky Swap** from Telegram.
 
@@ -23,6 +23,9 @@ This guide explains how to use **Barky Volume** and **Barky Swap** from Telegram
 
 Important:
 - If your wallet does not meet the requirement, access remains locked.
+- After you verify a wallet, the bot stores that Solana address and re-checks the BARKcoin balance automatically on a periodic schedule.
+- The default automatic schedule is once every 24 hours, but it can be made more frequent through the token gate monitor interval setting.
+- If a later check finds the balance below the minimum, access is blocked again and running tasks are stopped.
 - For security, private key input messages are deleted by the bot flow where supported.
 
 ## 2. Main Navigation
@@ -49,6 +52,11 @@ Per task, you can configure:
 - Wallet funding amount
 - Number of trading wallets used
 - Trading mode/strategy
+
+Main task panel highlights:
+- The info panel shows current trade size, slippage, wallet funding, selected chain and generated volume.
+- The minimum trade size is `0.000001` native coin on every supported chain.
+- Back buttons are available throughout the settings flow to return to the previous menu.
 
 ### 3.2 Create or Open a Token Task
 
@@ -77,6 +85,15 @@ Typical flow:
 3. Fund trading wallets from main wallet.
 4. Select how many wallets are active for the task.
 
+Trading Wallet Menu buttons:
+- **Generate Wallets**: create additional trading wallets for the active chain.
+- **Withdraw Wallets**: withdraw native coin from trading wallets, with optional token sale before withdrawal.
+- **Delete Wallets**: delete trading wallets for the active chain.
+- **Wallets Backup**: view/export stored trading wallets.
+- **Check Balance**: show a simple list of generated trading wallets with shortened address and native balance.
+- **Wallets Funding**: open funding controls for trading wallets.
+- **Wallets Use**: choose how many trading wallets are used by the task.
+
 ### 3.5 Funding Trading Wallets
 
 Use:
@@ -97,13 +114,32 @@ Sweep trading wallets:
   - sell tokens + withdraw native
   - withdraw native only
 
-### 3.7 Monitoring Commands
+Inside the UI this flow is shown as **Withdraw Wallets**.
+
+### 3.7 Barky Trading Live Window
+
+When realtime notifications are enabled, each running volume bot can publish a **Barky Trading Live** window for its own chain/task.
+
+Each live window shows:
+- Current generated volume
+- Current trade size
+- Current slippage
+- Active wallets count
+- Configured strategy/mode
+
+Live window actions:
+- **Pause**: pauses that task directly from the live window, removes the live message, shows a temporary confirmation, and reopens the main task panel.
+- **Main Menu**: closes the live window and reopens the info panel for that exact task/chain.
+
+If multiple volume bots are running at the same time, each task refreshes and republishes its own live window independently.
+
+### 3.8 Monitoring Commands
 
 - `/status` shows wallet balances and bot status.
 - `/volume` shows generated volume for your tasks.
 - `/help` shows in-bot quick help.
 
-### 3.8 Risk and Operational Notes
+### 3.9 Risk and Operational Notes
 
 - Keep enough native coin for gas/network fees and wallet funding.
 - Very low balances can cause failed transactions.
@@ -166,6 +202,12 @@ These are separate from main volume wallets and are used for swap execution.
 - `/fund_trading <amount>` - Fund trading wallets on selected chain.
 - `/sweep_trading` - Sweep trading wallets.
 
+Main UI labels used in the current bot:
+- **Withdraw Wallets** = sweep trading wallets flow.
+- **Delete Wallets** = delete trading wallets flow.
+- **Wallets Funding** = trading wallet funding menu.
+- **Wallets Use** = trading wallet selection/count menu.
+
 Optional legacy/explicit forms may also be available for some commands with a chain parameter.
 
 ---
@@ -179,6 +221,8 @@ Optional legacy/explicit forms may also be available for some commands with a ch
 - Use minimum required balances in hot wallets.
 
 
-https://linktr.ee/BARKcoinCTO
-https://x.com/BARKcoin2025
-https://t.me/officialbarkcoin
+
+WEB: https://linktr.ee/BARKcoinCTO
+TG: https://t.me/officialbarkcoin
+𝕏: https://x.com/BARKcoin2025
+
