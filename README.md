@@ -11,7 +11,7 @@ Developed with ❤️ by BARKcoin 🐶
 
 
 
-# Barky User Guide (English)
+# Barky User Guide
 
 This guide explains how to use **Barky Volume** and **Barky Swap** from Telegram.
 
